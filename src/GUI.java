@@ -379,7 +379,7 @@ public class GUI extends javax.swing.JFrame {
         jTextFieldAnswerBD.setText(" ");
         exeBD.setText(" ");
         BC.counter=0;
-        BC.counter2=0;
+      
        String a=jTextField1Goal.getText().toString();
        String t= jTextFieldInferenceR.getText().toString()+";";
        t=t.concat(jTextFieldBF.getText().toString());
