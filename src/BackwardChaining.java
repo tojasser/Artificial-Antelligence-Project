@@ -5,7 +5,6 @@ import java.io.*;
 class BC {
     // create variables
     public static int counter = 0;
-    public static int counter2 = 0;
     public static String tell;
     public static String ask;
     public static ArrayList < String > agenda;  // Goal
@@ -61,8 +60,7 @@ class BC {
         }
         // no 
         else {
-            int c= counter;
-            counter=counter-counter2;
+           
             output = "NO";
             output += "\n Counter: " + counter;
         }
@@ -77,7 +75,7 @@ class BC {
             String q = agenda.remove(agenda.size() - 1);
             // add the entailed array
             entailed.add(q);
-          //  counter++;
+      
           
             // if this element is a fact then we dont need to go further
             if (!facts.contains(q)) {
@@ -95,14 +93,14 @@ class BC {
                         for (int j = 0; j < temp.size(); j++) {
                             // add the symbols to a temp array
                             p.add(temp.get(j));
-                           // counter++;
+                        
                         }
                     }
                 }
                 // no symbols were generated and since it isnt a fact either 
                 // then this sybmol and eventually ASK  cannot be implied by TELL
                 if (p.size() == 0) {
-                    // counter=0;
+                     counter=0;
                     return false;
                 } else {
                     // there are symbols so check for previously processed ones and add to agenda
@@ -117,7 +115,7 @@ class BC {
 
                 }
             }
-            counter2++;
+           
             
 
         } //while end
